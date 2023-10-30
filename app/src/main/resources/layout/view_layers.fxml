@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<HBox style="-fx-background-color: #d2d2d2;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.thebinarybandits.drawr.controllers.LayersController">
+    <VBox style="-fx-background-color: #f4f4f4;">
+        <ToolBar prefHeight="40.0" prefWidth="200.0">
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#createLayer" text="New Layer"/>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#moveUp" text="↑"/>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#moveDown" text="↓"/>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#deleteLayer" text="x"/>
+        </ToolBar>
+        <ScrollPane hbarPolicy="NEVER" prefHeight="665.0" prefWidth="260.0" style="-fx-border-color: #ffffff;"
+                    vbarPolicy="ALWAYS" fitToWidth="true">
+            <VBox fx:id="layersContainer"/>
+        </ScrollPane>
+    </VBox>
+    <VBox>
+        <HBox alignment="CENTER" style="-fx-background-color: #f4f4f4;">
+            <ToolBar prefHeight="40.0" prefWidth="130.0">
+                <Button focusTraversable="false" mnemonicParsing="false" onAction="#previewAnimation"
+                        text="Preview Animation"/>
+            </ToolBar>
+            <Label alignment="CENTER" text="Delay (ms):">
+                <font>
+                    <Font size="14.0"/>
+                </font>
+            </Label>
+            <TextField fx:id="delayField" focusTraversable="false" prefHeight="40.0" prefWidth="42.0"
+                       style="-fx-background-color: #f4f4f4;" text="300"/>
+        </HBox>
+        <ImageView fx:id="animationView" fitHeight="240.0" fitWidth="240.0" pickOnBounds="true" preserveRatio="true"/>
+    </VBox>
+</HBox>

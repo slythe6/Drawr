@@ -1,0 +1,52 @@
+Root{
+    -fx-background-color: white;
+}
+
+VBox {
+    -fx-spacing: 10px; /* Add some space between the elements */
+    -fx-font-family: "Comic Sans MS";
+}
+
+/* Style the RadioButtons */
+RadioButton {
+    -fx-font-size: 14px; /* Increase the font size */
+    -fx-text-fill: black; /* Set the text color to black */
+}
+
+/* Style the selected RadioButton */
+RadioButton:selected {
+    -fx-font-weight: bold; /* Make the text bold */
+}
+
+/* Style the ColorPicker */
+ColorPicker {
+    -fx-background-color: white; /* Set the background color to white */
+    -fx-color-label-visible: true; /* Hide the color label */
+    -fx-font-size: 14;
+}
+
+/* Style the ColorPicker arrow button */
+ColorPicker .color-picker-label {
+    -fx-background-color: white; /* Set the arrow button background color to white */
+    -fx-background-radius: 0; /* Remove the button's rounded corners */
+}
+
+/* Style the ColorPicker popup */
+ColorPicker .color-picker-popup {
+    -fx-background-color: white; /* Set the popup background color to white */
+    -fx-background-radius: 0; /* Remove the popup's rounded corners */
+}
+
+/* Style the ColorPicker selected color */
+ColorPicker .color-picker-color {
+    -fx-background-color: #0072c6; /* Set the selected color to blue */
+}
+
+ToolBar{
+    -fx-background-color: #f4f4f4;
+}
+
+Label{
+    -fx-font-family: "Comic Sans MS";
+}
+

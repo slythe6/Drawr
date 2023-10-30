@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.thebinarybandits.drawr.controllers.AppController">
+    <top>
+        <MenuBar BorderPane.alignment="CENTER">
+            <Menu mnemonicParsing="false" text="File">
+                <MenuItem mnemonicParsing="false" onAction="#newProject" text="New"/>
+                <MenuItem mnemonicParsing="false" onAction="#openProject" text="Open..."/>
+                <SeparatorMenuItem mnemonicParsing="false"/>
+                <MenuItem mnemonicParsing="false" onAction="#saveProject" text="Save"/>
+                <Menu mnemonicParsing="false" text="Save As...">
+                    <MenuItem mnemonicParsing="false" onAction="#saveAsPNG" text="PNG"/>
+                    <MenuItem mnemonicParsing="false" onAction="#saveAsSpriteSheet" text="Spritesheet"/>
+                    <MenuItem mnemonicParsing="false" onAction="#saveAsGIF" text="GIF"/>
+                </Menu>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+                <MenuItem mnemonicParsing="false" onAction="#undo" text="Undo"/>
+                <MenuItem mnemonicParsing="false" onAction="#redo" text="Redo"/>
+                <MenuItem mnemonicParsing="false" onAction="#clear" text="Clear"/>
+            </Menu>
+        </MenuBar>
+    </top>
+    <left>
+        <fx:include fx:id="tools" source="view_tools.fxml"/>
+    </left>
+    <right>
+        <fx:include source="view_layers.fxml"/>
+    </right>
+    <center>
+        <fx:include source="view_canvas.fxml"/>
+    </center>
+</BorderPane>

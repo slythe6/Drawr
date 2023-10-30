@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<VBox prefHeight="360.0" prefWidth="150.0" style="-fx-background-color: #d2d2d2;" BorderPane.alignment="CENTER"
+      xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.thebinarybandits.drawr.controllers.ToolsController">
+    <RadioButton fx:id="penButton" focusTraversable="false" mnemonicParsing="false" onAction="#penSelected"
+                 selected="true" text="Pen">
+        <tooltip>
+            <Tooltip text="Pen"/>
+        </tooltip>
+        <toggleGroup>
+            <ToggleGroup fx:id="toolButtonGroup"/>
+        </toggleGroup>
+    </RadioButton>
+    <RadioButton focusTraversable="false" mnemonicParsing="false" onAction="#eraserSelected" text="Eraser"
+                 toggleGroup="$toolButtonGroup">
+        <tooltip>
+            <Tooltip text="Eraser"/>
+        </tooltip>
+    </RadioButton>
+    <RadioButton focusTraversable="false" mnemonicParsing="false" onAction="#paintBucketSelected" text="PaintBucket"
+                 toggleGroup="$toolButtonGroup"/>
+    <RadioButton focusTraversable="false" mnemonicParsing="false" onAction="#eyeDropperSelected" text="EyeDropper"
+                 toggleGroup="$toolButtonGroup"/>
+    <ColorPicker fx:id="colorPicker" focusTraversable="false" onAction="#updateColor">
+        <value>
+            <Color/>
+        </value>
+        <tooltip>
+            <Tooltip text="Paint Bucket"/>
+        </tooltip>
+    </ColorPicker>
+</VBox>
